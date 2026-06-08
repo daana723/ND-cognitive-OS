@@ -1,0 +1,19 @@
+src/
+  components/
+    Profile/
+    EmotionalNavigator/
+    SensoryCheckIn/
+    Discoveries/
+    Recommendations/
+  logic/
+    patternEngine.js
+    stateMachine.js
+    cognitiveMap.js
+  data/
+    profile.json
+    states.json
+    sensory.json
+    discoveries.json
+public/
+package.json
+README.md

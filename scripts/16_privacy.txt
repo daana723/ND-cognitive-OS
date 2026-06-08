@@ -1,0 +1,23 @@
+[SCRIPT_16_PRIVACY]
+[CHARACTER: British Woman — clear, trustworthy]
+[TONE: direct, reassuring]
+[PACE: normal]
+[EMOTION: confident]
+
+Privacy isn't a feature. It's the foundation.
+
+Everything in ND Cognitive OS stays on your device. LocalStorage. No cloud. No servers. No data leaving your machine.
+
+We don't see your emotions. Your patterns. Your discoveries. We can't. They're not sent anywhere.
+
+This is not a growth hack. Your cognitive data is not valuable to us. It's valuable to you.
+
+You own it. You export it. You delete it.
+
+That's not marketing. That's architecture.
+
+The system works because you trust it. And you can trust it because it has nothing to do with anyone else.
+
+Your mind. Your data. Your map.
+
+[END]

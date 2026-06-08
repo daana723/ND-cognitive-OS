@@ -1,0 +1,23 @@
+[SCRIPT_17_DATA_EXPORT]
+[CHARACTER: Indigo — practical, clear]
+[TONE: instructional, friendly]
+[PACE: normal]
+[EMOTION: neutral]
+
+You own your data. All of it.
+
+One tap exports everything — your emotional log, your sensory check-ins, your discoveries, your state transitions.
+
+JSON format. Machine-readable. Yours forever.
+
+You can analyze it yourself. Bring it to a therapist. Compare it with other tools. Or just archive it.
+
+If this system ever goes away, your data doesn't.
+
+This is not a lock-in strategy. The opposite. We want you to feel safe entering data because you know you can always take it with you.
+
+Export anytime. No restrictions. No asking permission.
+
+Your data. Your choice. Always.
+
+[END]

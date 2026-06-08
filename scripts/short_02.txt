@@ -1,0 +1,12 @@
+[SCRIPT_SHORT_02]
+[CHARACTER: Indigo — empowering, direct]
+[TONE: bold, clear]
+[PACE: normal]
+[EMOTION: confident]
+
+You're not here to fix yourself.
+You're here to reclaim yourself.
+The things that made you feel most different?
+They might actually be your greatest gifts.
+
+[END]

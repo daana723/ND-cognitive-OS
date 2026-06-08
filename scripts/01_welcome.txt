@@ -1,0 +1,15 @@
+[SCRIPT_01_WELCOME]
+[CHARACTER: Indigo — warm, calm, slightly British]
+[TONE: warm, inviting]
+[PACE: slow]
+[EMOTION: empathetic]
+
+Welcome. This is not another productivity app. This is cognitive infrastructure.
+
+ND Cognitive OS is a system that helps you understand how you think, how you regulate, and how you create — designed specifically for neurodivergent minds.
+
+No streaks. No pressure. No gamification. Just a quiet space to map your inner world.
+
+Let's begin.
+
+[END]

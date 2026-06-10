@@ -1,0 +1,25 @@
+Build ND Cognitive OS v1. Read SPARK_FRAMEWORK.md, ECOSYSTEM_MAP.md, and 2E_ASSESSMENT_SPEC.md first.
+
+TASKS:
+1. Verify build: npm run build
+2. Create 2E SPARK Assessment module (src/components/SPARK/):
+   - SPARKAssessment.jsx: 40 questions (8 per dimension), Likert 0-4
+   - SPARKResults.jsx: radar chart, Spark Index (0-20), profile type, recommendations
+   - Dimensions: Cognitive Intensity, Emotional Resonance, Sensory Amplification, Creative Divergence, Existential Drive
+   - Profiles: Quiet Spark (0-6), Flickering Spark (7-12), Burning Spark (13-16), Wildfire (17-20)
+3. Create Settings page (src/components/Settings/Settings.jsx):
+   - Export all data as JSON
+   - Clear all data with confirmation
+   - Edit cognitive profile
+4. Fix Onboarding to save profile data to store
+5. Create Landing page presenting both assessment entry points
+6. Update App.jsx to include new modules
+7. Update Navbar with Settings link
+8. Verify build: npm run build
+9. Push to GitHub
+
+DESIGN: Use SPARK palette (indigo #3A2E6E, gold #D9B76E, deep violet #1D1538). ND-safe. Mobile-first.
+
+Use recharts for radar chart. Store results in LocalStorage.
+
+Work autonomously. Report all changes when done.

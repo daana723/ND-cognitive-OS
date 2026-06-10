@@ -28,13 +28,58 @@ export default function Dashboard() {
   const getCognitiveMap = useStore((s) => s.getCognitiveMap);
   const getPatterns = useStore((s) => s.getPatterns);
   const getRecommendations = useStore((s) => s.getRecommendations);
+  const getSparkTranslation = useStore((s) => s.getSparkTranslation);
+  const setActiveModule = useStore((s) => s.setActiveModule);
 
   const map = getCognitiveMap();
   const patterns = getPatterns();
   const recommendations = getRecommendations();
+  const spark = getSparkTranslation();
 
   return (
     <div className="space-y-6">
+      {/* SPARK Profile — the assessment translated into how you work */}
+      {spark ? (
+        <section className="card border-t-4 border-indigo-500">
+          <div className="flex items-center justify-between mb-3">
+            <div>
+              <h3 className="label">Your SPARK Profile</h3>
+              <p className="text-lg font-semibold text-indigo-300">{spark.profileType}</p>
+            </div>
+            <div className="text-right">
+              <div className="text-2xl font-bold text-gray-100">{spark.sparkIndex.toFixed(1)}</div>
+              <div className="text-xs text-gray-500">Index / 20</div>
+            </div>
+          </div>
+          {spark.topStrengths.length > 0 && (
+            <ul className="space-y-1 mb-3">
+              {spark.topStrengths.map((s, i) => (
+                <li key={i} className="text-sm text-gray-300 flex gap-2">
+                  <span className="text-indigo-400">◆</span>
+                  <span>{s}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+          <button
+            onClick={() => setActiveModule('sparkResults')}
+            className="text-sm text-indigo-300 hover:text-indigo-200"
+          >
+            View full profile →
+          </button>
+        </section>
+      ) : (
+        <section className="card border-t-4 border-indigo-500/40">
+          <h3 className="label mb-1">Your SPARK Profile</h3>
+          <p className="text-sm text-gray-400 mb-3">
+            Take the assessment to translate how your mind works into your strengths and the conditions you need.
+          </p>
+          <button onClick={() => setActiveModule('spark')} className="btn-primary text-sm">
+            Take the SPARK Assessment
+          </button>
+        </section>
+      )}
+
       {/* Current State */}
       <section>
         <h2 className="text-lg font-medium text-gray-100 mb-3">Current State</h2>

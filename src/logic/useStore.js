@@ -8,6 +8,7 @@ import { persist } from 'zustand/middleware';
 import { createInitialState, transition, setEnergy, setSensory } from './stateMachine.js';
 import { createProfile, buildCognitiveMap, getWorkflowRecommendation } from './cognitiveMap.js';
 import { detectPatterns } from './patternEngine.js';
+import { translateSparkProfile, getSparkRecommendations } from './sparkTranslation.js';
 
 const STORAGE_KEY = 'nd-cognitive-os';
 
@@ -94,8 +95,18 @@ export const useStore = create(
       },
 
       getRecommendations: () => {
-        const { profile, cognitiveState } = get();
-        return getWorkflowRecommendation(profile, cognitiveState);
+        const { profile, cognitiveState, sparkAssessmentResults } = get();
+        const stateBased = getWorkflowRecommendation(profile, cognitiveState);
+        const sparkBased = getSparkRecommendations(sparkAssessmentResults);
+        // Merge, strengths-first SPARK guidance ahead of generic state guidance,
+        // de-duplicated.
+        return [...new Set([...sparkBased, ...stateBased])];
+      },
+
+      // Cognitive Translation: strengths-first reading of the SPARK profile.
+      getSparkTranslation: () => {
+        const { sparkAssessmentResults } = get();
+        return translateSparkProfile(sparkAssessmentResults);
       },
     }),
     {

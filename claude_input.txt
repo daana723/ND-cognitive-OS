@@ -1,0 +1,1 @@
+Read CLAUDE_CODE_MASTER_PROMPT.md in the project root. Execute all tasks in order. Budget is $5. Report all changes when done.

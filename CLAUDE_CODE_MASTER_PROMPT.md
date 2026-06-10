@@ -24,10 +24,27 @@ A cognitive modeling system for neurodivergent minds. Not productivity software.
 6. **ND Cognitive OS** (this repo) — Foundation layer
 
 ### The Vision
-- **Entry point:** 2E Assessment (Dabrowski framework)
-- **Monetization:** Free assessment → $12 full report → $7/mo Pro → $29/mo Ecosystem
+- **Entry Point 1:** General ND/ADHD Assessment (already exists in Serendipity Lab as ADHD self-assessment)
+- **Entry Point 2:** 2E Assessment (SPARK framework, Dabrowski overexcitabilities) — THE differentiator
+- **Both feed into the same user profile** but serve different audiences
+- **Monetization:** Free assessments → $12 full 2E report → $7/mo Pro → $29/mo Ecosystem
 - **Differentiator:** No competitor combines cognitive state tracking + sensory monitoring + pattern engine + ND-safe design + local-first privacy
 - **Tagline:** "Understand how you think. Not how you should think."
+
+### Two Entry Points (IMPORTANT)
+1. **General ND Assessment** — for all neurodivergent people (ADHD, autism, HSP, etc.)
+   - Already exists as ADHD self-assessment in Serendipity Lab
+   - Should be integrated into this app as a module
+   - Covers: attention patterns, sensory sensitivity, executive function, emotional regulation
+
+2. **2E Assessment (SPARK Framework)** — for gifted/twice-exceptional people
+   - Based on Dabrowski's Theory of Positive Disintegration
+   - 5 dimensions: Cognitive Intensity, Emotional Resonance, Sensory Amplification, Creative Divergence, Existential Drive
+   - Scoring: 0-4 per dimension, 0-20 total
+   - Profile types: Quiet Spark (0-6), Flickering Spark (7-12), Burning Spark (13-16), Wildfire (17-20)
+   - See SPARK_FRAMEWORK.md for full spec
+
+**Claude should design an elegant way to present both entry points on the landing/home page.**
 
 ### Voiceovers Available
 - 20 long voiceovers (Mia + British Woman) at C:\Users\danap\Downloads\

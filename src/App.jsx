@@ -1,12 +1,12 @@
 import { useStore } from './logic/useStore';
-import Dashboard from './Profile/Dashboard';
-import EmotionalNavigator from './EmotionalNavigator/EmotionalNavigator';
-import SensoryCheckIn from './SensoryCheckIn/SensoryCheckIn';
-import Discoveries from './Discoveries/Discoveries';
-import Recommendations from './Recommendations/Recommendations';
-import PatternEngine from './PatternEngine/PatternEngine';
-import Onboarding from './Profile/Onboarding';
-import Navbar from './Profile/Navbar';
+import Dashboard from './components/Profile/Dashboard';
+import EmotionalNavigator from './components/EmotionalNavigator/EmotionalNavigator';
+import SensoryCheckIn from './components/SensoryCheckIn/SensoryCheckIn';
+import Discoveries from './components/Discoveries/Discoveries';
+import Recommendations from './components/Recommendations/Recommendations';
+import PatternEngine from './components/PatternEngine/PatternEngine';
+import Onboarding from './components/Profile/Onboarding';
+import Navbar from './components/Profile/Navbar';
 
 const MODULES = {
   dashboard: Dashboard,

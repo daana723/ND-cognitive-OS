@@ -17,12 +17,13 @@ export const useStore = create(
       // Core state
       cognitiveState: createInitialState(),
       profile: createProfile(),
-      
+
       // Module data
       emotionalLog: [],
       sensoryLog: [],
       discoveries: [],
-      
+      sparkAssessmentResults: null,
+
       // UI
       activeModule: 'dashboard',
       showOnboarding: true,
@@ -36,6 +37,11 @@ export const useStore = create(
       updateProfile: (data) => set((s) => ({
         profile: { ...s.profile, ...data, updatedAt: new Date().toISOString() }
       })),
+
+      saveSparkResults: (results) => set({
+        sparkAssessmentResults: results,
+        activeModule: 'sparkResults'
+      }),
 
       changeState: (newState, context) => set((s) => ({
         cognitiveState: transition(s.cognitiveState, newState, context)
@@ -100,6 +106,7 @@ export const useStore = create(
         emotionalLog: state.emotionalLog,
         sensoryLog: state.sensoryLog,
         discoveries: state.discoveries,
+        sparkAssessmentResults: state.sparkAssessmentResults,
         showOnboarding: state.showOnboarding,
       }),
     }

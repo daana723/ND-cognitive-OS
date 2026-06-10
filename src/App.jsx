@@ -5,6 +5,10 @@ import SensoryCheckIn from './components/SensoryCheckIn/SensoryCheckIn';
 import Discoveries from './components/Discoveries/Discoveries';
 import Recommendations from './components/Recommendations/Recommendations';
 import PatternEngine from './components/PatternEngine/PatternEngine';
+import SPARKAssessment from './components/SPARK/SPARKAssessment';
+import SPARKResults from './components/SPARK/SPARKResults';
+import Settings from './components/Settings/Settings';
+import Landing from './components/Landing/Landing';
 import Onboarding from './components/Profile/Onboarding';
 import Navbar from './components/Profile/Navbar';
 
@@ -15,13 +19,23 @@ const MODULES = {
   discoveries: Discoveries,
   recommendations: Recommendations,
   patterns: PatternEngine,
+  spark: SPARKAssessment,
+  sparkResults: SPARKResults,
+  settings: Settings,
+  landing: Landing,
 };
 
 export default function App() {
   const activeModule = useStore((s) => s.activeModule);
   const showOnboarding = useStore((s) => s.showOnboarding);
+  const profile = useStore((s) => s.profile);
 
   if (showOnboarding) return <Onboarding />;
+
+  // Show landing page if user hasn't completed onboarding
+  if (!profile.cognitiveStyle) {
+    return <Landing />;
+  }
 
   const ModuleComponent = MODULES[activeModule] || Dashboard;
 

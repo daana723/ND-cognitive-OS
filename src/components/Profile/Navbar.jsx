@@ -7,6 +7,9 @@ const NAV_ITEMS = [
   { id: 'discoveries', label: 'Discoveries', icon: '✧' },
   { id: 'patterns', label: 'Patterns', icon: '⬡' },
   { id: 'recommendations', label: 'Guidance', icon: '⟐' },
+  { id: 'spark', label: 'SPARK', icon: '◇' },
+  { id: 'sparkResults', label: 'Results', icon: '★' },
+  { id: 'settings', label: 'Settings', icon: '⚙️' },
 ];
 
 export default function Navbar() {

@@ -7,6 +7,14 @@ export default function Onboarding() {
   const updateProfile = useStore((s) => s.updateProfile);
   const dismissOnboarding = useStore((s) => s.dismissOnboarding);
 
+  const handleDismiss = () => {
+    const profile = useStore.getState().profile;
+    // Only dismiss if profile is set
+    if (profile.cognitiveStyle) {
+      dismissOnboarding();
+    }
+  };
+
   const steps = [
     {
       title: 'Welcome to your Cognitive OS',
@@ -88,12 +96,12 @@ export default function Onboarding() {
           {step > 0 ? (
             <button onClick={() => setStep(step - 1)} className="btn-ghost">Back</button>
           ) : (
-            <button onClick={dismissOnboarding} className="text-sm text-gray-500 hover:text-gray-300">Skip</button>
+            <button onClick={handleDismiss} className="text-sm text-gray-500 hover:text-gray-300">Skip</button>
           )}
           {step < steps.length - 1 ? (
             <button onClick={() => setStep(step + 1)} className="btn-primary">Next</button>
           ) : (
-            <button onClick={dismissOnboarding} className="btn-primary">Begin</button>
+            <button onClick={handleDismiss} className="btn-primary">Begin</button>
           )}
         </div>
 
